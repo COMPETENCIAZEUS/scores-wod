@@ -3,32 +3,32 @@ document.addEventListener('DOMContentLoaded', function() {
     const categories = {
         beginner: {
             men: [
-                { name: 'Juan Pérez', position: 1, points: 95, events: 5, heats: 'Heat 1', lane: 3, schedule: '10:00 AM' },
-                { name: 'Carlos Díaz', position: 2, points: 90, events: 5, heats: 'Heat 1', lane: 4, schedule: '10:00 AM' },
+                { name: 'Juan Pérez', position: 1, points: 0, events: 0, heats: 'Heat 1', lane: 3, schedule: '10:00 AM' },
+                { name: 'Carlos Díaz', position: 2, points: 0, events: 0, heats: 'Heat 1', lane: 4, schedule: '10:00 AM' },
             ],
             women: [
-                { name: 'Ana López', position: 1, points: 98, events: 5, heats: 'Heat 2', lane: 2, schedule: '11:00 AM' },
-                { name: 'María Gómez', position: 2, points: 85, events: 5, heats: 'Heat 2', lane: 3, schedule: '11:00 AM' },
+                { name: 'Ana López', position: 1, points: 0, events: 0, heats: 'Heat 0', lane: 2, schedule: '11:00 AM' },
+                { name: 'María Gómez', position: 2, points: 0, events: 0, heats: 'Heat 0', lane: 3, schedule: '11:00 AM' },
             ]
         },
         intermediate: {
             men: [
-                { name: 'Luis Fernández', position: 1, points: 100, events: 5, heats: 'Heat 3', lane: 1, schedule: '12:00 PM' },
-                { name: 'Miguel Torres', position: 2, points: 89, events: 5, heats: 'Heat 3', lane: 2, schedule: '12:00 PM' },
+                { name: 'Luis Fernández', position: 0, points: 0, events: 5, heats: 'Heat 3', lane: 1, schedule: '12:00 PM' },
+                { name: 'Miguel Torres', position: 0, points: 0, events: 5, heats: 'Heat 3', lane: 2, schedule: '12:00 PM' },
             ],
             women: [
-                { name: 'Laura Ramírez', position: 1, points: 94, events: 5, heats: 'Heat 4', lane: 1, schedule: '1:00 PM' },
-                { name: 'Elena Morales', position: 2, points: 87, events: 5, heats: 'Heat 4', lane: 2, schedule: '1:00 PM' },
+                { name: 'Laura Ramírez', position: 0, points: 0, events: 5, heats: 'Heat 4', lane: 1, schedule: '1:00 PM' },
+                { name: 'Elena Morales', position: 0, points: 0, events: 5, heats: 'Heat 4', lane: 2, schedule: '1:00 PM' },
             ]
         },
         advanced: {
             men: [
-                { name: 'David Hernández', position: 1, points: 105, events: 5, heats: 'Heat 5', lane: 1, schedule: '2:00 PM' },
-                { name: 'Jorge Castillo', position: 2, points: 95, events: 5, heats: 'Heat 5', lane: 2, schedule: '2:00 PM' },
+                { name: 'David Hernández', position: 0, points: 0, events: 5, heats: 'Heat 5', lane: 1, schedule: '2:00 PM' },
+                { name: 'Jorge Castillo', position: 0, points: 0, events: 5, heats: 'Heat 5', lane: 2, schedule: '2:00 PM' },
             ],
             women: [
-                { name: 'Lucía Martínez', position: 1, points: 99, events: 5, heats: 'Heat 6', lane: 1, schedule: '3:00 PM' },
-                { name: 'Sara Mendoza', position: 2, points: 92, events: 5, heats: 'Heat 6', lane: 2, schedule: '3:00 PM' },
+                { name: 'Lucía Martínez', position: 0, points: 0, events: 5, heats: 'Heat 6', lane: 1, schedule: '3:00 PM' },
+                { name: 'Sara Mendoza', position: 0, points: 0, events: 5, heats: 'Heat 6', lane: 2, schedule: '3:00 PM' },
             ]
         }
     };
@@ -41,7 +41,7 @@ document.addEventListener('DOMContentLoaded', function() {
                             <thead>
                                 <tr>
                                     <th>Posición</th>
-                                    <th>Nombre</th>
+                                    <th>Nombre del guerrero zeus!!</th>
                                     <th>Puntaje</th>
                                 </tr>
                             </thead>
@@ -74,7 +74,7 @@ document.addEventListener('DOMContentLoaded', function() {
         const participant = categories[category][gender].find(p => p.name === name);
         const modalBody = document.querySelector('.modal-body');
         
-        let detailsHtml = `<h6>Nombre:</h6> <p>${participant.name}</p>
+        let detailsHtml = `<h6>Nombre del guerrero zeus!!:</h6> <p>${participant.name}</p>
                            <h6>Puntaje:</h6> <p>${participant.points}</p>
                            <h6>Eventos Realizados:</h6> <p>${participant.events}</p>
                            <h6>Heat:</h6> <p>${participant.heats}</p>
