@@ -1,0 +1,23 @@
+body {
+    background-color: #f8f9fa;
+}
+
+.category-table {
+    margin-top: 20px;
+}
+
+.table-container {
+    margin-bottom: 20px;
+}
+
+.modal-body {
+    font-size: 16px;
+}
+
+.modal-body h6 {
+    font-weight: bold;
+}
+
+.text-center {
+    text-align: center;
+}
