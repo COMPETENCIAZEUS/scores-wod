@@ -5,6 +5,7 @@ document.addEventListener('DOMContentLoaded', function() {
             men: [
                 { name: 'Juan Pérez', position: 1, points: 0, events: 0, heats: 'Heat 1', lane: 3, schedule: '10:00 AM' },
                 { name: 'Carlos Díaz', position: 2, points: 0, events: 0, heats: 'Heat 1', lane: 4, schedule: '10:00 AM' },
+                { name: 'Enrique 4to mjr dl pais', position: 3, points: 0, events: 0, heats: 'Heat 1', lane: 4, schedule: '10:00 AM' },
             ],
             women: [
                 { name: 'Ana López', position: 1, points: 0, events: 0, heats: 'Heat 0', lane: 2, schedule: '11:00 AM' },
