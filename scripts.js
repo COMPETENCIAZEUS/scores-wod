@@ -1,3 +1,8 @@
+
+
+
+
+
 document.addEventListener('DOMContentLoaded', function() {
     // Datos de ejemplo
     const categories = {
@@ -7,7 +12,7 @@ document.addEventListener('DOMContentLoaded', function() {
                     name: 'Juan Pérez',
                     position: 1,
                     points: 0,
-                    events: 0,
+                    events: 1,
                     heats: 'Heat 1',
                     lane: 3,
                     schedule: '10:00 AM',
@@ -22,7 +27,7 @@ document.addEventListener('DOMContentLoaded', function() {
                     name: 'Carlos Díaz',
                     position: 2,
                     points: 0,
-                    events: 0,
+                    events: 1,
                     heats: 'Heat 1',
                     lane: 4,
                     schedule: '10:00 AM',
@@ -202,33 +207,38 @@ document.addEventListener('DOMContentLoaded', function() {
     };
 
     // Renderizar tablas por categoría y género
-    function renderCategory(category, gender, containerId) {
-        const container = document.getElementById(containerId);
-        const participants = categories[category][gender];
-        
-        let tableHtml = `<table class="table table-striped">
-                            <thead>
-                                <tr>
-                                    <th>Posición</th>
-                                    <th>Nombre</th>
-                                    <th>Puntaje</th>
-                                </tr>
-                            </thead>
-                            <tbody>`;
-        
-        participants.forEach(participant => {
-            tableHtml += `<tr>
-                            <td>${participant.position}</td>
-                            <td><a href="#" class="participant-link" data-category="${category}" data-gender="${gender}" data-name="${participant.name}">${participant.name}</a></td>
-                            <td>${participant.points}</td>
-                          </tr>`;
-        });
+   // Renderizar tablas por categoría y género
+function renderCategory(category, gender, containerId) {
+    const container = document.getElementById(containerId);
+    let participants = categories[category][gender];
 
-        tableHtml += `  </tbody>
-                        </table>`;
-        
-        container.innerHTML = tableHtml;
-    }
+    // Ordenar participantes por puntaje (de mayor a menor)
+    participants.sort((a, b) => b.points - a.points);
+    
+    let tableHtml = `<table class="table table-striped">
+                        <thead>
+                            <tr>
+                                <th>Posición</th>
+                                <th>Nombre</th>
+                                <th>Puntaje</th>
+                            </tr>
+                        </thead>
+                        <tbody>`;
+
+    participants.forEach(participant => {
+        tableHtml += `<tr>
+                        <td>${participant.position}</td>
+                        <td><a href="#" class="participant-link" data-category="${category}" data-gender="${gender}" data-name="${participant.name}">${participant.name}</a></td>
+                        <td>${participant.points}</td>
+                      </tr>`;
+    });
+
+    tableHtml += `  </tbody>
+                    </table>`;
+    
+    container.innerHTML = tableHtml;
+}
+
 
     // Renderizar todas las categorías
     function renderAllCategories() {
