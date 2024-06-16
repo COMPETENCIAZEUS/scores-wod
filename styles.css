@@ -1,24 +1,47 @@
-body {
-    background-color: #f8f9fa;
+/* Estilos para las tablas de clasificación */
+.container {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #f0f0f0;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
-.category-table {
-    margin-top: 20px;
-}
-
-.table-container {
+.table {
+    width: 100%;
     margin-bottom: 20px;
+    border-collapse: collapse;
+    background-color: #fff;
+    border: 1px solid #ddd;
 }
 
-.modal-body {
-    font-size: 16px;
+.table th, .table td {
+    padding: 10px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
 }
 
-.modal-body h6 {
-    font-weight: bold;
+.table th {
+    background-color: #333;
+    color: #fff;
 }
 
-.text-center {
-    text-align: center;
+.table tbody tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+.table tbody tr:hover {
+    background-color: #ddd;
+}
+
+.participant-link {
+    color: #007bff;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.participant-link:hover {
+    text-decoration: underline;
 }
 
