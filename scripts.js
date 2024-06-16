@@ -1,10 +1,25 @@
+// Solicitar permiso para enviar notificaciones
+function requestNotificationPermission() {
+    if ('Notification' in window) {
+        Notification.requestPermission().then(permission => {
+            if (permission === 'granted') {
+                console.log('Permiso de notificación concedido.');
+            }
+        });
+    }
+}
 
-
+// Función para enviar notificaciones
+function sendNotification(title, body) {
+    if (Notification.permission === 'granted') {
+        new Notification(title, { body });
+    }
+}
 
 
 
 document.addEventListener('DOMContentLoaded', function() {
-    // Datos de ejemplo
+    // Datos de participantes hombres princpiantes
     const categories = {
         beginner: {
             men: [
@@ -39,6 +54,9 @@ document.addEventListener('DOMContentLoaded', function() {
                     ]
                 },
             ],
+
+            //datos de participantes mujeres principiantes
+
             women: [
                 {
                     name: 'Ana López',
@@ -71,6 +89,10 @@ document.addEventListener('DOMContentLoaded', function() {
                     ]
                 },
             ]
+
+            //datos de participantes hombres intermedios
+
+
         },
         intermediate: {
             men: [
@@ -105,6 +127,9 @@ document.addEventListener('DOMContentLoaded', function() {
                     ]
                 },
             ],
+
+                         //datos de participantes mujeres intermedios
+
             women: [
                 {
                     name: 'Laura Ramírez',
@@ -138,6 +163,8 @@ document.addEventListener('DOMContentLoaded', function() {
                 },
             ]
         },
+
+         //datos de participantes hombres avanzados 
         advanced: {
             men: [
                 {
@@ -171,6 +198,9 @@ document.addEventListener('DOMContentLoaded', function() {
                     ]
                 },
             ],
+
+            //datos de participantes mujeres avanazdos 
+
             women: [
                 {
                     name: 'Lucía Martínez',
@@ -265,7 +295,7 @@ function renderCategory(category, gender, containerId) {
         participant.eventDetails.forEach((event, index) => {
             detailsHtml += `<h6>${event.name}:</h6>
                             <p>Repeticiones: ${event.repetitions}</p>
-                            <p>Información Adicional: ${event.additionalInfo}</p>`;
+                            <p>Datos extra y horario: ${event.additionalInfo}</p>`;
         });
 
         modalBody.innerHTML = detailsHtml;
@@ -284,3 +314,5 @@ function renderCategory(category, gender, containerId) {
 
     renderAllCategories();
 });
+
+
