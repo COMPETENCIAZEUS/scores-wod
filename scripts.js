@@ -814,7 +814,7 @@ document.addEventListener('DOMContentLoaded', function() {
                     ]
                 },
                 {
-                    name: 'Sara Mendoza',
+                    name: 'NAMELESS',
                     position: 2,
                     points: 0,
                     events: 0,
@@ -830,7 +830,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 },
                 {
                     name: 'NAMELESS',
-                    position: 1,
+                    position: 3,
                     points: 0,
                     events: 0,
                     heats: 'Heat 6',
@@ -845,7 +845,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 },
                 {
                     name: 'NAMELESS',
-                    position: 1,
+                    position: 4,
                     points: 0,
                     events: 0,
                     heats: 'Heat 6',
@@ -860,7 +860,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 },
                 {
                     name: 'NAMELESS',
-                    position: 1,
+                    position: 5,
                     points: 0,
                     events: 0,
                     heats: 'Heat 6',
@@ -875,7 +875,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 },
                 {
                     name: 'NAMELESS',
-                    position: 1,
+                    position: 6,
                     points: 0,
                     events: 0,
                     heats: 'Heat 6',
@@ -890,7 +890,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 },
                 {
                     name: 'NAMELESS',
-                    position: 1,
+                    position: 7,
                     points: 0,
                     events: 0,
                     heats: 'Heat 6',
@@ -905,7 +905,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 },
                 {
                     name: 'NAMELESS',
-                    position: 1,
+                    position: 8,
                     points: 0,
                     events: 0,
                     heats: 'Heat 6',
@@ -920,7 +920,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 },
                 {
                     name: 'NAMELESS',
-                    position: 1,
+                    position: 9,
                     points: 0,
                     events: 0,
                     heats: 'Heat 6',
@@ -935,7 +935,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 },
                 {
                     name: 'NAMELESS',
-                    position: 1,
+                    position: 10,
                     points: 0,
                     events: 0,
                     heats: 'Heat 6',
