@@ -1054,3 +1054,42 @@ function showMessage(message) {
 
 // Ejemplo de uso
 showMessage('¡Hola! Bienvenido a nuestra aplicación.');
+
+
+ // Verificar si el dispositivo es móvil
+    function isMobileDevice() {
+        return (typeof window.orientation !== "undefined") || (navigator.userAgent.indexOf('IEMobile') !== -1);
+    }
+
+    // Mostrar mensaje de orientación horizontal en dispositivos móviles
+    function showOrientationMessage() {
+        if (isMobileDevice()) {
+            const orientationMessage = document.createElement('div');
+            orientationMessage.innerHTML = `
+                <div style="position: fixed; top: 0; left: 0; width: 100%; height: 100%; background-color: rgba(0, 0, 0, 0.5); color: #fff; display: flex; justify-content: center; align-items: center; font-size: 24px;">
+                    Por favor, gire su dispositivo en horizontal para una mejor experiencia.
+                </div>
+            `;
+            document.body.appendChild(orientationMessage);
+            
+            // Verificar la orientación actual y ocultar el mensaje cuando el dispositivo esté en horizontal
+            window.addEventListener('orientationchange', function() {
+                if (window.orientation === 0 || window.orientation === 180) {
+                    orientationMessage.style.display = 'none';
+                } else {
+                    orientationMessage.style.display = 'flex';
+                }
+            });
+
+            // Ocultar el mensaje si el dispositivo ya está en horizontal
+            if (window.orientation === 0 || window.orientation === 180) {
+                orientationMessage.style.display = 'none';
+            } else {
+                orientationMessage.style.display = 'flex';
+            }
+        }
+    }
+
+    // Llamar a la función para mostrar el mensaje de orientación
+    showOrientationMessage();
+});
