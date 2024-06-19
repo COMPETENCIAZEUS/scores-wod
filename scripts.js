@@ -1,992 +1,239 @@
-
 document.addEventListener('DOMContentLoaded', function() {
-    // Datos de participantes hombres princpiantes
+    // Datos de ejemplo
     const categories = {
         beginner: {
             men: [
                 {
-                    name: 'NAMELESS',
+                    name: 'Juan Pérez',
                     position: 1,
-                    points: 0,
-                    events: 0,
+                    points: 95,
+                    events: 4,
                     heats: 'Heat 1',
                     lane: 3,
                     schedule: '10:00 AM',
                     eventDetails: [
-                        { name: 'Evento 1', repetitions: 0, additionalInfo: '10:00 AM' },
-                        { name: 'Evento 2', repetitions: 0, additionalInfo: 'SIN INFO' },
-                        { name: 'Evento 3', repetitions: 0, additionalInfo: 'SIN INFO' },
-                        { name: 'Evento 4', repetitions: 0, additionalInfo: 'SIN INFO' }
+                        { name: 'Evento 1', repetitions: 50, additionalInfo: 'Info del evento 1' },
+                        { name: 'Evento 2', repetitions: 60, additionalInfo: 'Info del evento 2' },
+                        { name: 'Evento 3', repetitions: 45, additionalInfo: 'Info del evento 3' },
+                        { name: 'Evento 4', repetitions: 55, additionalInfo: 'Info del evento 4' }
                     ]
                 },
-
                 {
-                    name: 'NAMELESS',
+                    name: 'Carlos Díaz',
                     position: 2,
-                    points: 0,
-                    events: 0,
+                    points: 90,
+                    events: 4,
                     heats: 'Heat 1',
                     lane: 4,
                     schedule: '10:00 AM',
                     eventDetails: [
-                        { name: 'Evento 1', repetitions: 0, additionalInfo: '10:00 AM' },
-                        { name: 'Evento 2', repetitions: 0, additionalInfo: 'SIN INFO' },
-                        { name: 'Evento 3', repetitions: 0, additionalInfo: 'SIN INFO' },
-                        { name: 'Evento 4', repetitions: 0, additionalInfo: 'SIN INFO' }
-                    ]
-                },
-
-                {
-                    name: 'NAMELESS',
-                    position: 3,
-                    points: 0,
-                    events: 0,
-                    heats: 'Heat 1',
-                    lane: 3,
-                    schedule: '10:00 AM',
-                    eventDetails: [
-                        { name: 'Evento 1', repetitions: 0, additionalInfo: '10:00 AM' },
-                        { name: 'Evento 2', repetitions: 0, additionalInfo: 'SIN INFO' },
-                        { name: 'Evento 3', repetitions: 0, additionalInfo: 'SIN INFO' },
-                        { name: 'Evento 4', repetitions: 0, additionalInfo: 'SIN INFO' }
-                    ]
-                },
-
-                {
-                    name: 'NAMELESS',
-                    position: 4,
-                    points: 0,
-                    events: 0,
-                    heats: 'Heat 1',
-                    lane: 3,
-                    schedule: '10:00 AM',
-                    eventDetails: [
-                        { name: 'Evento 1', repetitions: 0, additionalInfo: '10:00 AM' },
-                        { name: 'Evento 2', repetitions: 0, additionalInfo: 'SIN INFO' },
-                        { name: 'Evento 3', repetitions: 0, additionalInfo: 'SIN INFO' },
-                        { name: 'Evento 4', repetitions: 0, additionalInfo: 'SIN INFO' }
-                    ]
-                },
-
-                {
-                    name: 'NAMELESS',
-                    position: 5,
-                    points: 0,
-                    events: 0,
-                    heats: 'Heat 1',
-                    lane: 3,
-                    schedule: '10:00 AM',
-                    eventDetails: [
-                        { name: 'Evento 1', repetitions: 0, additionalInfo: '10:00 AM' },
-                        { name: 'Evento 2', repetitions: 0, additionalInfo: 'SIN INFO' },
-                        { name: 'Evento 3', repetitions: 0, additionalInfo: 'SIN INFO' },
-                        { name: 'Evento 4', repetitions: 0, additionalInfo: 'SIN INFO' }
-                    ]
-                },
-
-                {
-                    name: 'NAMELESS',
-                    position: 6,
-                    points: 0,
-                    events: 0,
-                    heats: 'Heat 1',
-                    lane: 3,
-                    schedule: '10:00 AM',
-                    eventDetails: [
-                        { name: 'Evento 1', repetitions: 0, additionalInfo: '10:00 AM' },
-                        { name: 'Evento 2', repetitions: 0, additionalInfo: 'SIN INFO' },
-                        { name: 'Evento 3', repetitions: 0, additionalInfo: 'SIN INFO' },
-                        { name: 'Evento 4', repetitions: 0, additionalInfo: 'SIN INFO' }
-                    ]
-                },
-
-                {
-                    name: 'NAMELESS',
-                    position: 7,
-                    points: 0,
-                    events: 0,
-                    heats: 'Heat 1',
-                    lane: 3,
-                    schedule: '10:00 AM',
-                    eventDetails: [
-                        { name: 'Evento 1', repetitions: 0, additionalInfo: '10:00 AM' },
-                        { name: 'Evento 2', repetitions: 0, additionalInfo: 'SIN INFO' },
-                        { name: 'Evento 3', repetitions: 0, additionalInfo: 'SIN INFO' },
-                        { name: 'Evento 4', repetitions: 0, additionalInfo: 'SIN INFO' }
-                    ]
-                },
-
-                {
-                    name: 'NAMELESS',
-                    position: 8,
-                    points: 0,
-                    events: 0,
-                    heats: 'Heat 1',
-                    lane: 3,
-                    schedule: '10:00 AM',
-                    eventDetails: [
-                        { name: 'Evento 1', repetitions: 0, additionalInfo: '10:00 AM' },
-                        { name: 'Evento 2', repetitions: 0, additionalInfo: 'SIN INFO' },
-                        { name: 'Evento 3', repetitions: 0, additionalInfo: 'SIN INFO' },
-                        { name: 'Evento 4', repetitions: 0, additionalInfo: 'SIN INFO' }
-                    ]
-                },
-
-                {
-                    name: 'NAMELESS',
-                    position: 9,
-                    points: 0,
-                    events: 0,
-                    heats: 'Heat 1',
-                    lane: 3,
-                    schedule: '10:00 AM',
-                    eventDetails: [
-                        { name: 'Evento 1', repetitions: 0, additionalInfo: '10:00 AM' },
-                        { name: 'Evento 2', repetitions: 0, additionalInfo: 'SIN INFO' },
-                        { name: 'Evento 3', repetitions: 0, additionalInfo: 'SIN INFO' },
-                        { name: 'Evento 4', repetitions: 0, additionalInfo: 'SIN INFO' }
-                    ]
-                },
-
-                {
-                    name: 'NAMELESS',
-                    position: 10,
-                    points: 0,
-                    events: 0,
-                    heats: 'Heat 1',
-                    lane: 3,
-                    schedule: '10:00 AM',
-                    eventDetails: [
-                        { name: 'Evento 1', repetitions: 0, additionalInfo: '10:00 AM' },
-                        { name: 'Evento 2', repetitions: 0, additionalInfo: 'SIN INFO' },
-                        { name: 'Evento 3', repetitions: 0, additionalInfo: 'SIN INFO' },
-                        { name: 'Evento 4', repetitions: 0, additionalInfo: 'SIN INFO' }
+                        { name: 'Evento 1', repetitions: 45, additionalInfo: 'Info del evento 1' },
+                        { name: 'Evento 2', repetitions: 55, additionalInfo: 'Info del evento 2' },
+                        { name: 'Evento 3', repetitions: 50, additionalInfo: 'Info del evento 3' },
+                        { name: 'Evento 4', repetitions: 60, additionalInfo: 'Info del evento 4' }
                     ]
                 },
             ],
-
-            //datos de participantes mujeres principiantes
-
             women: [
                 {
-                    name: 'NAMELESS',
+                    name: 'Ana López',
                     position: 1,
-                    points: 0,
-                    events: 0,
+                    points: 98,
+                    events: 4,
                     heats: 'Heat 2',
                     lane: 2,
                     schedule: '11:00 AM',
                     eventDetails: [
-                        { name: 'Evento 1', repetitions: 0, additionalInfo: '11:00 AM' },
-                        { name: 'Evento 2', repetitions: 0, additionalInfo: 'SIN INFO' },
-                        { name: 'Evento 3', repetitions: 0, additionalInfo: 'SIN INFO' },
-                        { name: 'Evento 4', repetitions: 0, additionalInfo: 'SIN INFO' }
+                        { name: 'Evento 1', repetitions: 60, additionalInfo: 'Info del evento 1' },
+                        { name: 'Evento 2', repetitions: 65, additionalInfo: 'Info del evento 2' },
+                        { name: 'Evento 3', repetitions: 70, additionalInfo: 'Info del evento 3' },
+                        { name: 'Evento 4', repetitions: 68, additionalInfo: 'Info del evento 4' }
                     ]
                 },
-
                 {
-                    name: 'NAMELESS',
+                    name: 'María Gómez',
                     position: 2,
-                    points: 0,
-                    events: 0,
+                    points: 85,
+                    events: 4,
                     heats: 'Heat 2',
                     lane: 3,
                     schedule: '11:00 AM',
                     eventDetails: [
-                        { name: 'Evento 1', repetitions: 0, additionalInfo: '11:00 AM' },
-                        { name: 'Evento 2', repetitions: 0, additionalInfo: 'SIN INFO' },
-                        { name: 'Evento 3', repetitions: 0, additionalInfo: 'SIN INFO' },
-                        { name: 'Evento 4', repetitions: 0, additionalInfo: 'SIN INFO' }
-                    ]
-                },
-
-                {
-                    name: 'NAMELESS',
-                    position: 3,
-                    points: 0,
-                    events: 0,
-                    heats: 'Heat 2',
-                    lane: 2,
-                    schedule: '11:00 AM',
-                    eventDetails: [
-                        { name: 'Evento 1', repetitions: 0, additionalInfo: '11:00 AM' },
-                        { name: 'Evento 2', repetitions: 0, additionalInfo: 'SIN INFO' },
-                        { name: 'Evento 3', repetitions: 0, additionalInfo: 'SIN INFO' },
-                        { name: 'Evento 4', repetitions: 0, additionalInfo: 'SIN INFO' }
-                    ]
-                },
-                
-                {
-                    name: 'NAMELESS',
-                    position: 4,
-                    points: 0,
-                    events: 0,
-                    heats: 'Heat 2',
-                    lane: 2,
-                    schedule: '11:00 AM',
-                    eventDetails: [
-                        { name: 'Evento 1', repetitions: 0, additionalInfo: '11:00 AM' },
-                        { name: 'Evento 2', repetitions: 0, additionalInfo: 'SIN INFO' },
-                        { name: 'Evento 3', repetitions: 0, additionalInfo: 'SIN INFO' },
-                        { name: 'Evento 4', repetitions: 0, additionalInfo: 'SIN INFO' }
-                    ]
-                },
-                {
-                    name: 'NAMELESS',
-                    position: 5,
-                    points: 0,
-                    events: 0,
-                    heats: 'Heat 2',
-                    lane: 2,
-                    schedule: '11:00 AM',
-                    eventDetails: [
-                        { name: 'Evento 1', repetitions: 0, additionalInfo: '11:00 AM' },
-                        { name: 'Evento 2', repetitions: 0, additionalInfo: 'SIN INFO' },
-                        { name: 'Evento 3', repetitions: 0, additionalInfo: 'SIN INFO' },
-                        { name: 'Evento 4', repetitions: 0, additionalInfo: 'SIN INFO' }
-                    ]
-                },
-                {
-                    name: 'NAMELESS',
-                    position: 6,
-                    points: 0,
-                    events: 0,
-                    heats: 'Heat 2',
-                    lane: 2,
-                    schedule: '11:00 AM',
-                    eventDetails: [
-                        { name: 'Evento 1', repetitions: 0, additionalInfo: '11:00 AM' },
-                        { name: 'Evento 2', repetitions: 0, additionalInfo: 'SIN INFO' },
-                        { name: 'Evento 3', repetitions: 0, additionalInfo: 'SIN INFO' },
-                        { name: 'Evento 4', repetitions: 0, additionalInfo: 'SIN INFO' }
-                    ]
-                },
-                {
-                    name: 'NAMELESS',
-                    position: 7,
-                    points: 0,
-                    events: 0,
-                    heats: 'Heat 2',
-                    lane: 2,
-                    schedule: '11:00 AM',
-                    eventDetails: [
-                        { name: 'Evento 1', repetitions: 0, additionalInfo: '11:00 AM' },
-                        { name: 'Evento 2', repetitions: 0, additionalInfo: 'SIN INFO' },
-                        { name: 'Evento 3', repetitions: 0, additionalInfo: 'SIN INFO' },
-                        { name: 'Evento 4', repetitions: 0, additionalInfo: 'SIN INFO' }
-                    ]
-                },
-                {
-                    name: 'NAMELESS',
-                    position: 8,
-                    points: 0,
-                    events: 0,
-                    heats: 'Heat 2',
-                    lane: 2,
-                    schedule: '11:00 AM',
-                    eventDetails: [
-                        { name: 'Evento 1', repetitions: 0, additionalInfo: '11:00 AM' },
-                        { name: 'Evento 2', repetitions: 0, additionalInfo: 'SIN INFO' },
-                        { name: 'Evento 3', repetitions: 0, additionalInfo: 'SIN INFO' },
-                        { name: 'Evento 4', repetitions: 0, additionalInfo: 'SIN INFO' }
-                    ]
-                },
-                {
-                    name: 'NAMELESS',
-                    position: 9,
-                    points: 0,
-                    events: 0,
-                    heats: 'Heat 2',
-                    lane: 2,
-                    schedule: '11:00 AM',
-                    eventDetails: [
-                        { name: 'Evento 1', repetitions: 0, additionalInfo: '11:00 AM' },
-                        { name: 'Evento 2', repetitions: 0, additionalInfo: 'SIN INFO' },
-                        { name: 'Evento 3', repetitions: 0, additionalInfo: 'SIN INFO' },
-                        { name: 'Evento 4', repetitions: 0, additionalInfo: 'SIN INFO' }
-                    ]
-                },
-                {
-                    name: 'NAMELESS',
-                    position: 10,
-                    points: 0,
-                    events: 0,
-                    heats: 'Heat 2',
-                    lane: 2,
-                    schedule: '11:00 AM',
-                    eventDetails: [
-                        { name: 'Evento 1', repetitions: 0, additionalInfo: '11:00 AM' },
-                        { name: 'Evento 2', repetitions: 0, additionalInfo: 'SIN INFO' },
-                        { name: 'Evento 3', repetitions: 0, additionalInfo: 'SIN INFO' },
-                        { name: 'Evento 4', repetitions: 0, additionalInfo: 'SIN INFO' }
+                        { name: 'Evento 1', repetitions: 55, additionalInfo: 'Info del evento 1' },
+                        { name: 'Evento 2', repetitions: 60, additionalInfo: 'Info del evento 2' },
+                        { name: 'Evento 3', repetitions: 62, additionalInfo: 'Info del evento 3' },
+                        { name: 'Evento 4', repetitions: 61, additionalInfo: 'Info del evento 4' }
                     ]
                 },
             ]
-
-
-            //datos de participantes hombres intermedios
-
-
         },
         intermediate: {
             men: [
                 {
-                    name: 'NAMELESS',
+                    name: 'Luis Fernández',
                     position: 1,
-                    points: 0,
-                    events: 0,
+                    points: 100,
+                    events: 4,
                     heats: 'Heat 3',
                     lane: 1,
                     schedule: '12:00 PM',
                     eventDetails: [
-                        { name: 'Evento 1', repetitions: 0, additionalInfo: '12:00 PM' },
-                        { name: 'Evento 2', repetitions: 0, additionalInfo: 'SIN INFO' },
-                        { name: 'Evento 3', repetitions: 0, additionalInfo: 'SIN INFO' },
-                        { name: 'Evento 4', repetitions: 0, additionalInfo: 'SIN INFO' }
+                        { name: 'Evento 1', repetitions: 70, additionalInfo: 'Info del evento 1' },
+                        { name: 'Evento 2', repetitions: 75, additionalInfo: 'Info del evento 2' },
+                        { name: 'Evento 3', repetitions: 80, additionalInfo: 'Info del evento 3' },
+                        { name: 'Evento 4', repetitions: 85, additionalInfo: 'Info del evento 4' }
                     ]
                 },
                 {
-                    name: 'NAMELESS',
+                    name: 'Miguel Torres',
                     position: 2,
-                    points: 0,
-                    events: 0,
+                    points: 89,
+                    events: 4,
                     heats: 'Heat 3',
                     lane: 2,
                     schedule: '12:00 PM',
                     eventDetails: [
-                        { name: 'Evento 1', repetitions: 68, additionalInfo: '12:00 PM' },
-                        { name: 'Evento 2', repetitions: 70, additionalInfo: 'SIN INFO' },
-                        { name: 'Evento 3', repetitions: 72, additionalInfo: 'SIN INFO' },
-                        { name: 'Evento 4', repetitions: 74, additionalInfo: 'SIN INFO' }
-                    ]
-                },
-                {
-                    name: 'NAMELESS',
-                    position: 3,
-                    points: 0,
-                    events: 0,
-                    heats: 'Heat 3',
-                    lane: 1,
-                    schedule: '12:00 PM',
-                    eventDetails: [
-                        { name: 'Evento 1', repetitions: 0, additionalInfo: '12:00 PM' },
-                        { name: 'Evento 2', repetitions: 0, additionalInfo: 'SIN INFO' },
-                        { name: 'Evento 3', repetitions: 0, additionalInfo: 'SIN INFO' },
-                        { name: 'Evento 4', repetitions: 0, additionalInfo: 'SIN INFO' }
-                    ]
-                },
-                {
-                    name: 'NAMELESS',
-                    position: 4,
-                    points: 0,
-                    events: 0,
-                    heats: 'Heat 3',
-                    lane: 1,
-                    schedule: '12:00 PM',
-                    eventDetails: [
-                        { name: 'Evento 1', repetitions: 0, additionalInfo: '12:00 PM' },
-                        { name: 'Evento 2', repetitions: 0, additionalInfo: 'SIN INFO' },
-                        { name: 'Evento 3', repetitions: 0, additionalInfo: 'SIN INFO' },
-                        { name: 'Evento 4', repetitions: 0, additionalInfo: 'SIN INFO' }
-                    ]
-                },
-                {
-                    name: 'NAMELESS',
-                    position: 5,
-                    points: 0,
-                    events: 0,
-                    heats: 'Heat 3',
-                    lane: 1,
-                    schedule: '12:00 PM',
-                    eventDetails: [
-                        { name: 'Evento 1', repetitions: 0, additionalInfo: '12:00 PM' },
-                        { name: 'Evento 2', repetitions: 0, additionalInfo: 'SIN INFO' },
-                        { name: 'Evento 3', repetitions: 0, additionalInfo: 'SIN INFO' },
-                        { name: 'Evento 4', repetitions: 0, additionalInfo: 'SIN INFO' }
-                    ]
-                },
-                {
-                    name: 'NAMELESS',
-                    position: 6,
-                    points: 0,
-                    events: 0,
-                    heats: 'Heat 3',
-                    lane: 1,
-                    schedule: '12:00 PM',
-                    eventDetails: [
-                        { name: 'Evento 1', repetitions: 0, additionalInfo: '12:00 PM' },
-                        { name: 'Evento 2', repetitions: 0, additionalInfo: 'SIN INFO' },
-                        { name: 'Evento 3', repetitions: 0, additionalInfo: 'SIN INFO' },
-                        { name: 'Evento 4', repetitions: 0, additionalInfo: 'SIN INFO' }
-                    ]
-                },
-                {
-                    name: 'NAMELESS',
-                    position: 7,
-                    points: 0,
-                    events: 0,
-                    heats: 'Heat 3',
-                    lane: 1,
-                    schedule: '12:00 PM',
-                    eventDetails: [
-                        { name: 'Evento 1', repetitions: 0, additionalInfo: '12:00 PM' },
-                        { name: 'Evento 2', repetitions: 0, additionalInfo: 'SIN INFO' },
-                        { name: 'Evento 3', repetitions: 0, additionalInfo: 'SIN INFO' },
-                        { name: 'Evento 4', repetitions: 0, additionalInfo: 'SIN INFO' }
-                    ]
-                },
-                {
-                    name: 'NAMELESS',
-                    position: 8,
-                    points: 0,
-                    events: 0,
-                    heats: 'Heat 3',
-                    lane: 1,
-                    schedule: '12:00 PM',
-                    eventDetails: [
-                        { name: 'Evento 1', repetitions: 0, additionalInfo: '12:00 PM' },
-                        { name: 'Evento 2', repetitions: 0, additionalInfo: 'SIN INFO' },
-                        { name: 'Evento 3', repetitions: 0, additionalInfo: 'SIN INFO' },
-                        { name: 'Evento 4', repetitions: 0, additionalInfo: 'SIN INFO' }
-                    ]
-                },
-                {
-                    name: 'NAMELESS',
-                    position: 9,
-                    points: 0,
-                    events: 0,
-                    heats: 'Heat 3',
-                    lane: 1,
-                    schedule: '12:00 PM',
-                    eventDetails: [
-                        { name: 'Evento 1', repetitions: 0, additionalInfo: '12:00 PM' },
-                        { name: 'Evento 2', repetitions: 0, additionalInfo: 'SIN INFO' },
-                        { name: 'Evento 3', repetitions: 0, additionalInfo: 'SIN INFO' },
-                        { name: 'Evento 4', repetitions: 0, additionalInfo: 'SIN INFO' }
-                    ]
-                },
-
-                {
-                    name: 'NAMELESS',
-                    position: 10,
-                    points: 0,
-                    events: 0,
-                    heats: 'Heat 3',
-                    lane: 1,
-                    schedule: '12:00 PM',
-                    eventDetails: [
-                        { name: 'Evento 1', repetitions: 0, additionalInfo: '12:00 PM' },
-                        { name: 'Evento 2', repetitions: 0, additionalInfo: 'SIN INFO' },
-                        { name: 'Evento 3', repetitions: 0, additionalInfo: 'SIN INFO' },
-                        { name: 'Evento 4', repetitions: 0, additionalInfo: 'SIN INFO' }
+                        { name: 'Evento 1', repetitions: 68, additionalInfo: 'Info del evento 1' },
+                        { name: 'Evento 2', repetitions: 70, additionalInfo: 'Info del evento 2' },
+                        { name: 'Evento 3', repetitions: 72, additionalInfo: 'Info del evento 3' },
+                        { name: 'Evento 4', repetitions: 74, additionalInfo: 'Info del evento 4' }
                     ]
                 },
             ],
-
-                         //datos de participantes mujeres intermedios
-
             women: [
                 {
-                    name: 'NAMELESS',
+                    name: 'Laura Ramírez',
                     position: 1,
-                    points: 0,
-                    events: 0,
+                    points: 94,
+                    events: 4,
                     heats: 'Heat 4',
                     lane: 1,
                     schedule: '1:00 PM',
                     eventDetails: [
-                        { name: 'Evento 1', repetitions: 0, additionalInfo: '1:00 PM' },
-                        { name: 'Evento 2', repetitions: 0, additionalInfo: 'SIN INFO' },
-                        { name: 'Evento 3', repetitions: 0, additionalInfo: 'SIN INFO' },
-                        { name: 'Evento 4', repetitions: 0, additionalInfo: 'SIN INFO' }
+                        { name: 'Evento 1', repetitions: 65, additionalInfo: 'Info del evento 1' },
+                        { name: 'Evento 2', repetitions: 68, additionalInfo: 'Info del evento 2' },
+                        { name: 'Evento 3', repetitions: 70, additionalInfo: 'Info del evento 3' },
+                        { name: 'Evento 4', repetitions: 72, additionalInfo: 'Info del evento 4' }
                     ]
                 },
                 {
-                    name: 'NAMELESS',
+                    name: 'Elena Morales',
                     position: 2,
-                    points: 0,
-                    events: 0,
+                    points: 87,
+                    events: 4,
                     heats: 'Heat 4',
                     lane: 2,
                     schedule: '1:00 PM',
                     eventDetails: [
-                        { name: 'Evento 1', repetitions: 0, additionalInfo: '1:00 PM' },
-                        { name: 'Evento 2', repetitions: 0, additionalInfo: 'SIN INFO' },
-                        { name: 'Evento 3', repetitions: 0, additionalInfo: 'SIN INFO' },
-                        { name: 'Evento 4', repetitions: 0, additionalInfo: 'SIN INFO' }
-                    ]
-                },
-                {
-                    name: 'NAMELESS',
-                    position: 3,
-                    points: 0,
-                    events: 0,
-                    heats: 'Heat 4',
-                    lane: 2,
-                    schedule: '1:00 PM',
-                    eventDetails: [
-                        { name: 'Evento 1', repetitions: 0, additionalInfo: '1:00 PM' },
-                        { name: 'Evento 2', repetitions: 0, additionalInfo: 'SIN INFO' },
-                        { name: 'Evento 3', repetitions: 0, additionalInfo: 'SIN INFO' },
-                        { name: 'Evento 4', repetitions: 0, additionalInfo: 'SIN INFO' }
-                    ]
-                },
-                {
-                    name: 'NAMELESS',
-                    position: 4,
-                    points: 0,
-                    events: 0,
-                    heats: 'Heat 4',
-                    lane: 2,
-                    schedule: '1:00 PM',
-                    eventDetails: [
-                        { name: 'Evento 1', repetitions: 0, additionalInfo: '1:00 PM' },
-                        { name: 'Evento 2', repetitions: 0, additionalInfo: 'SIN INFO' },
-                        { name: 'Evento 3', repetitions: 0, additionalInfo: 'SIN INFO' },
-                        { name: 'Evento 4', repetitions: 0, additionalInfo: 'SIN INFO' }
-                    ]
-                },
-                {
-                    name: 'NAMELESS',
-                    position: 5,
-                    points: 0,
-                    events: 0,
-                    heats: 'Heat 4',
-                    lane: 2,
-                    schedule: '1:00 PM',
-                    eventDetails: [
-                        { name: 'Evento 1', repetitions: 0, additionalInfo: '1:00 PM' },
-                        { name: 'Evento 2', repetitions: 0, additionalInfo: 'SIN INFO' },
-                        { name: 'Evento 3', repetitions: 0, additionalInfo: 'SIN INFO' },
-                        { name: 'Evento 4', repetitions: 0, additionalInfo: 'SIN INFO' }
-                    ]
-                },
-                {
-                    name: 'NAMELESS',
-                    position: 6,
-                    points: 0,
-                    events: 0,
-                    heats: 'Heat 4',
-                    lane: 2,
-                    schedule: '1:00 PM',
-                    eventDetails: [
-                        { name: 'Evento 1', repetitions: 0, additionalInfo: '1:00 PM' },
-                        { name: 'Evento 2', repetitions: 0, additionalInfo: 'SIN INFO' },
-                        { name: 'Evento 3', repetitions: 0, additionalInfo: 'SIN INFO' },
-                        { name: 'Evento 4', repetitions: 0, additionalInfo: 'SIN INFO' }
-                    ]
-                },
-                {
-                    name: 'NAMELESS',
-                    position: 7,
-                    points: 0,
-                    events: 0,
-                    heats: 'Heat 4',
-                    lane: 2,
-                    schedule: '1:00 PM',
-                    eventDetails: [
-                        { name: 'Evento 1', repetitions: 0, additionalInfo: '1:00 PM' },
-                        { name: 'Evento 2', repetitions: 0, additionalInfo: 'SIN INFO' },
-                        { name: 'Evento 3', repetitions: 0, additionalInfo: 'SIN INFO' },
-                        { name: 'Evento 4', repetitions: 0, additionalInfo: 'SIN INFO' }
-                    ]
-                },
-                {
-                    name: 'NAMELESS',
-                    position: 8,
-                    points: 0,
-                    events: 0,
-                    heats: 'Heat 4',
-                    lane: 2,
-                    schedule: '1:00 PM',
-                    eventDetails: [
-                        { name: 'Evento 1', repetitions: 0, additionalInfo: '1:00 PM' },
-                        { name: 'Evento 2', repetitions: 0, additionalInfo: 'SIN INFO' },
-                        { name: 'Evento 3', repetitions: 0, additionalInfo: 'SIN INFO' },
-                        { name: 'Evento 4', repetitions: 0, additionalInfo: 'SIN INFO' }
-                    ]
-                },
-                {
-                    name: 'NAMELESS',
-                    position: 9,
-                    points: 0,
-                    events: 0,
-                    heats: 'Heat 4',
-                    lane: 2,
-                    schedule: '1:00 PM',
-                    eventDetails: [
-                        { name: 'Evento 1', repetitions: 0, additionalInfo: '1:00 PM' },
-                        { name: 'Evento 2', repetitions: 0, additionalInfo: 'SIN INFO' },
-                        { name: 'Evento 3', repetitions: 0, additionalInfo: 'SIN INFO' },
-                        { name: 'Evento 4', repetitions: 0, additionalInfo: 'SIN INFO' }
-                    ]
-                },
-                {
-                    name: 'NAMELESS',
-                    position: 10,
-                    points: 0,
-                    events: 0,
-                    heats: 'Heat 4',
-                    lane: 2,
-                    schedule: '1:00 PM',
-                    eventDetails: [
-                        { name: 'Evento 1', repetitions: 0, additionalInfo: '1:00 PM' },
-                        { name: 'Evento 2', repetitions: 0, additionalInfo: 'SIN INFO' },
-                        { name: 'Evento 3', repetitions: 0, additionalInfo: 'SIN INFO' },
-                        { name: 'Evento 4', repetitions: 0, additionalInfo: 'SIN INFO' }
+                        { name: 'Evento 1', repetitions: 62, additionalInfo: 'Info del evento 1' },
+                        { name: 'Evento 2', repetitions: 64, additionalInfo: 'Info del evento 2' },
+                        { name: 'Evento 3', repetitions: 66, additionalInfo: 'Info del evento 3' },
+                        { name: 'Evento 4', repetitions: 68, additionalInfo: 'Info del evento 4' }
                     ]
                 },
             ]
         },
-
-         //datos de participantes hombres avanzados 
         advanced: {
             men: [
                 {
-                    name: 'NAMELESS',
+                    name: 'David Hernández',
                     position: 1,
-                    points: 0,
-                    events: 0,
+                    points: 105,
+                    events: 4,
                     heats: 'Heat 5',
                     lane: 1,
                     schedule: '2:00 PM',
                     eventDetails: [
-                        { name: 'Evento 1', repetitions: 0, additionalInfo: '2:00' },
-                        { name: 'Evento 2', repetitions: 0, additionalInfo: 'SIN INFO' },
-                        { name: 'Evento 3', repetitions: 0, additionalInfo: 'SIN INFO' },
-                        { name: 'Evento 4', repetitions: 0, additionalInfo: 'SIN INFO' }
+                        { name: 'Evento 1', repetitions: 80, additionalInfo: 'Info del evento 1' },
+                        { name: 'Evento 2', repetitions: 85, additionalInfo: 'Info del evento 2' },
+                        { name: 'Evento 3', repetitions: 90, additionalInfo: 'Info del evento 3' },
+                        { name: 'Evento 4', repetitions: 95, additionalInfo: 'Info del evento 4' }
                     ]
                 },
                 {
-                    name: 'NAMELESS',
+                    name: 'Jorge Castillo',
                     position: 2,
-                    points: 0,
-                    events: 0,
+                    points: 95,
+                    events: 4,
                     heats: 'Heat 5',
                     lane: 2,
                     schedule: '2:00 PM',
                     eventDetails: [
-                        { name: 'Evento 1', repetitions: 0, additionalInfo: '2:00 PM' },
-                        { name: 'Evento 2', repetitions: 0, additionalInfo: 'SIN INFO' },
-                        { name: 'Evento 3', repetitions: 0, additionalInfo: 'SIN INFO' },
-                        { name: 'Evento 4', repetitions: 0, additionalInfo: 'SIN INFO' }
-                    ]
-                },
-                {
-                    name: 'NAMELESS',
-                    position: 3,
-                    points: 0,
-                    events: 0,
-                    heats: 'Heat 5',
-                    lane: 1,
-                    schedule: '2:00 PM',
-                    eventDetails: [
-                        { name: 'Evento 1', repetitions: 0, additionalInfo: '2:00' },
-                        { name: 'Evento 2', repetitions: 0, additionalInfo: 'SIN INFO' },
-                        { name: 'Evento 3', repetitions: 0, additionalInfo: 'SIN INFO' },
-                        { name: 'Evento 4', repetitions: 0, additionalInfo: 'SIN INFO' }
-                    ]
-                },
-                {
-                    name: 'NAMELESS',
-                    position: 4,
-                    points: 0,
-                    events: 0,
-                    heats: 'Heat 5',
-                    lane: 1,
-                    schedule: '2:00 PM',
-                    eventDetails: [
-                        { name: 'Evento 1', repetitions: 0, additionalInfo: '2:00' },
-                        { name: 'Evento 2', repetitions: 0, additionalInfo: 'SIN INFO' },
-                        { name: 'Evento 3', repetitions: 0, additionalInfo: 'SIN INFO' },
-                        { name: 'Evento 4', repetitions: 0, additionalInfo: 'SIN INFO' }
-                    ]
-                },
-                {
-                    name: 'NAMELESS',
-                    position: 5,
-                    points: 0,
-                    events: 0,
-                    heats: 'Heat 5',
-                    lane: 1,
-                    schedule: '2:00 PM',
-                    eventDetails: [
-                        { name: 'Evento 1', repetitions: 0, additionalInfo: '2:00' },
-                        { name: 'Evento 2', repetitions: 0, additionalInfo: 'SIN INFO' },
-                        { name: 'Evento 3', repetitions: 0, additionalInfo: 'SIN INFO' },
-                        { name: 'Evento 4', repetitions: 0, additionalInfo: 'SIN INFO' }
-                    ]
-                },
-                {
-                    name: 'NAMELESS',
-                    position: 6,
-                    points: 0,
-                    events: 0,
-                    heats: 'Heat 5',
-                    lane: 1,
-                    schedule: '2:00 PM',
-                    eventDetails: [
-                        { name: 'Evento 1', repetitions: 0, additionalInfo: '2:00' },
-                        { name: 'Evento 2', repetitions: 0, additionalInfo: 'SIN INFO' },
-                        { name: 'Evento 3', repetitions: 0, additionalInfo: 'SIN INFO' },
-                        { name: 'Evento 4', repetitions: 0, additionalInfo: 'SIN INFO' }
-                    ]
-                },
-                {
-                    name: 'NAMELESS',
-                    position: 7,
-                    points: 0,
-                    events: 0,
-                    heats: 'Heat 5',
-                    lane: 1,
-                    schedule: '2:00 PM',
-                    eventDetails: [
-                        { name: 'Evento 1', repetitions: 0, additionalInfo: '2:00' },
-                        { name: 'Evento 2', repetitions: 0, additionalInfo: 'SIN INFO' },
-                        { name: 'Evento 3', repetitions: 0, additionalInfo: 'SIN INFO' },
-                        { name: 'Evento 4', repetitions: 0, additionalInfo: 'SIN INFO' }
-                    ]
-                },
-                {
-                    name: 'NAMELESS',
-                    position: 8,
-                    points: 0,
-                    events: 0,
-                    heats: 'Heat 5',
-                    lane: 1,
-                    schedule: '2:00 PM',
-                    eventDetails: [
-                        { name: 'Evento 1', repetitions: 0, additionalInfo: '2:00' },
-                        { name: 'Evento 2', repetitions: 0, additionalInfo: 'SIN INFO' },
-                        { name: 'Evento 3', repetitions: 0, additionalInfo: 'SIN INFO' },
-                        { name: 'Evento 4', repetitions: 0, additionalInfo: 'SIN INFO' }
-                    ]
-                },
-                {
-                    name: 'NAMELESS',
-                    position: 9,
-                    points: 0,
-                    events: 0,
-                    heats: 'Heat 5',
-                    lane: 1,
-                    schedule: '2:00 PM',
-                    eventDetails: [
-                        { name: 'Evento 1', repetitions: 0, additionalInfo: '2:00' },
-                        { name: 'Evento 2', repetitions: 0, additionalInfo: 'SIN INFO' },
-                        { name: 'Evento 3', repetitions: 0, additionalInfo: 'SIN INFO' },
-                        { name: 'Evento 4', repetitions: 0, additionalInfo: 'SIN INFO' }
-                    ]
-                },
-                {
-                    name: 'NAMELESS',
-                    position: 10,
-                    points: 0,
-                    events: 0,
-                    heats: 'Heat 5',
-                    lane: 1,
-                    schedule: '2:00 PM',
-                    eventDetails: [
-                        { name: 'Evento 1', repetitions: 0, additionalInfo: '2:00' },
-                        { name: 'Evento 2', repetitions: 0, additionalInfo: 'SIN INFO' },
-                        { name: 'Evento 3', repetitions: 0, additionalInfo: 'SIN INFO' },
-                        { name: 'Evento 4', repetitions: 0, additionalInfo: 'SIN INFO' }
+                        { name: 'Evento 1', repetitions: 78, additionalInfo: 'Info del evento 1' },
+                        { name: 'Evento 2', repetitions: 80, additionalInfo: 'Info del evento 2' },
+                        { name: 'Evento 3', repetitions: 82, additionalInfo: 'Info del evento 3' },
+                        { name: 'Evento 4', repetitions: 84, additionalInfo: 'Info del evento 4' }
                     ]
                 },
             ],
-
-
-            //datos de participantes mujeres avanazdos 
-
             women: [
                 {
-                    name: 'NAMELESS',
+                    name: 'Lucía Martínez',
                     position: 1,
-                    points: 0,
-                    events: 0,
+                    points: 99,
+                    events: 4,
                     heats: 'Heat 6',
                     lane: 1,
                     schedule: '3:00 PM',
                     eventDetails: [
-                        { name: 'Evento 1', repetitions: 0, additionalInfo: '3:00 PM' },
-                        { name: 'Evento 2', repetitions: 0, additionalInfo: 'SIN INFO' },
-                        { name: 'Evento 3', repetitions: 0, additionalInfo: 'SIN INFO' },
-                        { name: 'Evento 4', repetitions: 0, additionalInfo: 'SIN INFO' }
+                        { name: 'Evento 1', repetitions: 75, additionalInfo: 'Info del evento 1' },
+                        { name: 'Evento 2', repetitions: 78, additionalInfo: 'Info del evento 2' },
+                        { name: 'Evento 3', repetitions: 80, additionalInfo: 'Info del evento 3' },
+                        { name: 'Evento 4', repetitions: 83, additionalInfo: 'Info del evento 4' }
                     ]
                 },
                 {
-                    name: 'NAMELESS',
+                    name: 'Sara Mendoza',
                     position: 2,
-                    points: 0,
-                    events: 0,
+                    points: 87,
+                    events: 4,
                     heats: 'Heat 6',
                     lane: 2,
                     schedule: '3:00 PM',
                     eventDetails: [
-                        { name: 'Evento 1', repetitions: 0, additionalInfo: '3:00 PM' },
-                        { name: 'Evento 2', repetitions: 0, additionalInfo: 'SIN INFO' },
-                        { name: 'Evento 3', repetitions: 0, additionalInfo: 'SIN INFO' },
-                        { name: 'Evento 4', repetitions: 0, additionalInfo: 'SIN INFO' }
+                        { name: 'Evento 1', repetitions: 70, additionalInfo: 'Info del evento 1' },
+                        { name: 'Evento 2', repetitions: 72, additionalInfo: 'Info del evento 2' },
+                        { name: 'Evento 3', repetitions: 74, additionalInfo: 'Info del evento 3' },
+                        { name: 'Evento 4', repetitions: 76, additionalInfo: 'Info del evento 4' }
                     ]
-                },
-                {
-                    name: 'NAMELESS',
-                    position: 3,
-                    points: 0,
-                    events: 0,
-                    heats: 'Heat 6',
-                    lane: 1,
-                    schedule: '3:00 PM',
-                    eventDetails: [
-                        { name: 'Evento 1', repetitions: 0, additionalInfo: '3:00 PM' },
-                        { name: 'Evento 2', repetitions: 0, additionalInfo: 'SIN INFO' },
-                        { name: 'Evento 3', repetitions: 0, additionalInfo: 'SIN INFO' },
-                        { name: 'Evento 4', repetitions: 0, additionalInfo: 'SIN INFO' }
-                    ]
-                },
-                {
-                    name: 'NAMELESS',
-                    position: 4,
-                    points: 0,
-                    events: 0,
-                    heats: 'Heat 6',
-                    lane: 1,
-                    schedule: '3:00 PM',
-                    eventDetails: [
-                        { name: 'Evento 1', repetitions: 0, additionalInfo: '3:00 PM' },
-                        { name: 'Evento 2', repetitions: 0, additionalInfo: 'SIN INFO' },
-                        { name: 'Evento 3', repetitions: 0, additionalInfo: 'SIN INFO' },
-                        { name: 'Evento 4', repetitions: 0, additionalInfo: 'SIN INFO' }
-                    ]
-                },
-                {
-                    name: 'NAMELESS',
-                    position: 5,
-                    points: 0,
-                    events: 0,
-                    heats: 'Heat 6',
-                    lane: 1,
-                    schedule: '3:00 PM',
-                    eventDetails: [
-                        { name: 'Evento 1', repetitions: 0, additionalInfo: '3:00 PM' },
-                        { name: 'Evento 2', repetitions: 0, additionalInfo: 'SIN INFO' },
-                        { name: 'Evento 3', repetitions: 0, additionalInfo: 'SIN INFO' },
-                        { name: 'Evento 4', repetitions: 0, additionalInfo: 'SIN INFO' }
-                    ]
-                },
-                {
-                    name: 'NAMELESS',
-                    position: 6,
-                    points: 0,
-                    events: 0,
-                    heats: 'Heat 6',
-                    lane: 1,
-                    schedule: '3:00 PM',
-                    eventDetails: [
-                        { name: 'Evento 1', repetitions: 0, additionalInfo: '3:00 PM' },
-                        { name: 'Evento 2', repetitions: 0, additionalInfo: 'SIN INFO' },
-                        { name: 'Evento 3', repetitions: 0, additionalInfo: 'SIN INFO' },
-                        { name: 'Evento 4', repetitions: 0, additionalInfo: 'SIN INFO' }
-                    ]
-                },
-                {
-                    name: 'NAMELESS',
-                    position: 7,
-                    points: 0,
-                    events: 0,
-                    heats: 'Heat 6',
-                    lane: 1,
-                    schedule: '3:00 PM',
-                    eventDetails: [
-                        { name: 'Evento 1', repetitions: 0, additionalInfo: '3:00 PM' },
-                        { name: 'Evento 2', repetitions: 0, additionalInfo: 'SIN INFO' },
-                        { name: 'Evento 3', repetitions: 0, additionalInfo: 'SIN INFO' },
-                        { name: 'Evento 4', repetitions: 0, additionalInfo: 'SIN INFO' }
-                    ]
-                },
-                {
-                    name: 'NAMELESS',
-                    position: 8,
-                    points: 0,
-                    events: 0,
-                    heats: 'Heat 6',
-                    lane: 1,
-                    schedule: '3:00 PM',
-                    eventDetails: [
-                        { name: 'Evento 1', repetitions: 0, additionalInfo: '3:00 PM' },
-                        { name: 'Evento 2', repetitions: 0, additionalInfo: 'SIN INFO' },
-                        { name: 'Evento 3', repetitions: 0, additionalInfo: 'SIN INFO' },
-                        { name: 'Evento 4', repetitions: 0, additionalInfo: 'SIN INFO' }
-                    ]
-                },
-                {
-                    name: 'NAMELESS',
-                    position: 9,
-                    points: 0,
-                    events: 0,
-                    heats: 'Heat 6',
-                    lane: 1,
-                    schedule: '3:00 PM',
-                    eventDetails: [
-                        { name: 'Evento 1', repetitions: 0, additionalInfo: '3:00 PM' },
-                        { name: 'Evento 2', repetitions: 0, additionalInfo: 'SIN INFO' },
-                        { name: 'Evento 3', repetitions: 0, additionalInfo: 'SIN INFO' },
-                        { name: 'Evento 4', repetitions: 0, additionalInfo: 'SIN INFO' }
-                    ]
-                },
-                {
-                    name: 'NAMELESS',
-                    position: 10,
-                    points: 0,
-                    events: 0,
-                    heats: 'Heat 6',
-                    lane: 1,
-                    schedule: '3:00 PM',
-                    eventDetails: [
-                        { name: 'Evento 1', repetitions: 0, additionalInfo: '3:00 PM' },
-                        { name: 'Evento 2', repetitions: 0, additionalInfo: 'SIN INFO' },
-                        { name: 'Evento 3', repetitions: 0, additionalInfo: 'SIN INFO' },
-                        { name: 'Evento 4', repetitions: 0, additionalInfo: 'SIN INFO' }
-                    ]
-                },
+                }
             ]
         }
     };
 
-  
-   // Renderizar tablas por categoría y género
-function renderCategory(category, gender, containerId) {
-    const container = document.getElementById(containerId);
-    let participants = categories[category][gender];
+    // Renderizar tablas por categoría y género
+    function renderCategory(category, gender, containerId) {
+        const container = document.getElementById(containerId);
+        let participants = categories[category][gender];
 
-   
-    participants.sort((a, b) => b.points - a.points);
-    
-    let tableHtml = `<table class="table table-striped">
-                        <thead>
-                            <tr>
-                                <th>Posición</th>
-                                <th>Nombre</th>
-                                <th>Puntaje</th>
-                            </tr>
-                        </thead>
-                        <tbody>`;
+        // Ordenar participantes por puntaje (de mayor a menor)
+        participants.sort((a, b) => b.points - a.points);
+        
+        let tableHtml = `<table class="table table-striped">
+                            <thead>
+                                <tr>
+                                    <th>Posición</th>
+                                    <th>Nombre</th>
+                                    <th>Puntaje</th>
+                                </tr>
+                            </thead>
+                            <tbody>`;
 
-    participants.forEach(participant => {
-        tableHtml += `<tr>
-                        <td>${participant.position}</td>
-                        <td><a href="#" class="participant-link" data-category="${category}" data-gender="${gender}" data-name="${participant.name}">${participant.name}</a></td>
-                        <td>${participant.points}</td>
-                      </tr>`;
-    });
+        participants.forEach(participant => {
+            tableHtml += `<tr>
+                            <td>${participant.position}</td>
+                            <td><a href="#" class="participant-link" data-category="${category}" data-gender="${gender}" data-name="${participant.name}">${participant.name}</a></td>
+                            <td>${participant.points}</td>
+                          </tr>`;
+        });
 
-    tableHtml += `  </tbody>
-                    </table>`;
-    
-    container.innerHTML = tableHtml;
-}
+        tableHtml += `  </tbody>
+                        </table>`;
+        
+        container.innerHTML = tableHtml;
+    }
 
-
-    // Renderizar todas las categorías
+    // Renderizar todas las categorías y géneros
     function renderAllCategories() {
         renderCategory('beginner', 'men', 'beginner-men');
         renderCategory('beginner', 'women', 'beginner-women');
@@ -996,61 +243,46 @@ function renderCategory(category, gender, containerId) {
         renderCategory('advanced', 'women', 'advanced-women');
     }
 
-    // Mostrar detalles del participante en un modal
+    // Mostrar detalles del participante en el modal
     function showParticipantDetails(category, gender, name) {
         const participant = categories[category][gender].find(p => p.name === name);
-        const modalBody = document.querySelector('.modal-body');
-        
-        let detailsHtml = `<h6>Nombre:</h6> <p>${participant.name}</p>
-                           <h6>Puntaje:</h6> <p>${participant.points}</p>
-                           <h6>Eventos Realizados:</h6> <p>${participant.events}</p>
-                           <h6>Heat:</h6> <p>${participant.heats}</p>
-                           <h6>Carril:</h6> <p>${participant.lane}</p>
-                           <h6>Horario de proximo evento:</h6> <p>${participant.schedule}</p>`;
-        
-        participant.eventDetails.forEach((event, index) => {
-            detailsHtml += `<h6>${event.name}:</h6>
-                            <p>Repeticiones: ${event.repetitions}</p>
-                            <p>Datos extra y horario: ${event.additionalInfo}</p>`;
-        });
+        if (!participant) return;
 
-        modalBody.innerHTML = detailsHtml;
+        let modalBody = document.querySelector('#participantModal .modal-body');
+        modalBody.innerHTML = `
+            <h5>${participant.name}</h5>
+            <p><strong>Posición:</strong> ${participant.position}</p>
+            <p><strong>Puntaje:</strong> ${participant.points}</p>
+            <p><strong>Eventos realizados:</strong> ${participant.events}</p>
+            <p><strong>Heat:</strong> ${participant.heats}</p>
+            <p><strong>Carril:</strong> ${participant.lane}</p>
+            <p><strong>Horario:</strong> ${participant.schedule}</p>
+            <h6>Detalles de eventos:</h6>
+            <ul>
+                ${participant.eventDetails.map(event => `
+                    <li>
+                        <p><strong>${event.name}</strong></p>
+                        <p>Repeticiones: ${event.repetitions}</p>
+                        <p>Información adicional: ${event.additionalInfo}</p>
+                    </li>
+                `).join('')}
+            </ul>
+        `;
+
         $('#participantModal').modal('show');
     }
 
-    document.addEventListener('click', function(event) {
-        if (event.target.classList.contains('participant-link')) {
-            event.preventDefault();
-            const category = event.target.getAttribute('data-category');
-            const gender = event.target.getAttribute('data-gender');
-            const name = event.target.getAttribute('data-name');
+    // Inicializar el renderizado de todas las categorías
+    renderAllCategories();
+
+    // Evento para mostrar el modal con los detalles del participante
+    document.addEventListener('click', function(e) {
+        if (e.target.classList.contains('participant-link')) {
+            e.preventDefault();
+            const category = e.target.getAttribute('data-category');
+            const gender = e.target.getAttribute('data-gender');
+            const name = e.target.getAttribute('data-name');
             showParticipantDetails(category, gender, name);
         }
     });
-
-    renderAllCategories();
 });
-
-function checkOrientation() {
-    if (window.innerHeight > window.innerWidth) {
-        document.getElementById('orientation-overlay').style.display = 'flex';
-    } else {
-        document.getElementById('orientation-overlay').style.display = 'none';
-    }
-}
-
-window.addEventListener('resize', checkOrientation);
-window.addEventListener('orientationchange', checkOrientation);
-
-// Llamar a la función para verificar la orientación inicial
-checkOrientation();
-
-// Función para mostrar un mensaje en el contenedor
-function showMessage(message) {
-    const messageContainer = document.getElementById('message-container');
-    messageContainer.innerHTML = `<p>${message}</p>`;
-    messageContainer.classList.add('show'); // Mostrar el contenedor del mensaje
-}
-
-// Ejemplo de uso
-showMessage('¡Hola! Bienvenido a nuestra aplicación.');
