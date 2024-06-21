@@ -1031,3 +1031,77 @@ function renderCategory(category, gender, containerId) {
     renderAllCategories();
 });
 
+document.addEventListener('DOMContentLoaded', function() {
+    // Mostrar el logo al cargar la página
+    const logoOverlay = document.getElementById('logo-overlay');
+
+    // Ocultar el logo después de un tiempo
+    setTimeout(() => {
+        logoOverlay.classList.add('hidden');
+    }, 3000); // 3000ms = 3 segundos, ajusta según tu necesidad
+
+    // Resto de tu código existente
+    const categories = {
+        // ... Datos de ejemplo ...
+    };
+
+    // Función para renderizar tablas por categoría y género
+    function renderCategory(category, gender, containerId) {
+        // Código de renderización de tablas
+    }
+
+    // Renderizar todas las categorías y géneros
+    function renderAllCategories() {
+        // Código para renderizar todas las categorías
+    }
+
+    // Mostrar detalles del participante en el modal
+    function showParticipantDetails(category, gender, name) {
+        // Código para mostrar detalles del participante en el modal
+    }
+
+    // Inicializar el renderizado de todas las categorías
+    renderAllCategories();
+
+    // Evento para mostrar el modal con los detalles del participante
+    document.addEventListener('click', function(e) {
+        // Código para mostrar detalles del participante en el modal
+    });
+
+    // Verificar si el dispositivo es móvil
+    function isMobileDevice() {
+        return (typeof window.orientation !== "undefined") || (navigator.userAgent.indexOf('IEMobile') !== -1);
+    }
+
+    // Mostrar mensaje de orientación horizontal en dispositivos móviles
+    function showOrientationMessage() {
+        if (isMobileDevice()) {
+            const orientationMessage = document.createElement('div');
+            orientationMessage.innerHTML = `
+                <div style="position: fixed; top: 0; left: 0; width: 100%; height: 100%; background-color: rgba(0, 0, 0, 0.5); color: #fff; display: flex; justify-content: center; align-items: center; font-size: 24px;">
+                    Por favor, gire su dispositivo en horizontal para una mejor experiencia.
+                </div>
+            `;
+            document.body.appendChild(orientationMessage);
+            
+            // Verificar la orientación actual y ocultar el mensaje cuando el dispositivo esté en horizontal
+            window.addEventListener('orientationchange', function() {
+                if (window.orientation === 0 || window.orientation === 180) {
+                    orientationMessage.style.display = 'none';
+                } else {
+                    orientationMessage.style.display = 'flex';
+                }
+            });
+
+            // Ocultar el mensaje si el dispositivo ya está en horizontal
+            if (window.orientation === 0 || window.orientation === 180) {
+                orientationMessage.style.display = 'none';
+            } else {
+                orientationMessage.style.display = 'flex';
+            }
+        }
+    }
+
+    // Llamar a la función para mostrar el mensaje de orientación
+    showOrientationMessage();
+});
