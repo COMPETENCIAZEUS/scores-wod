@@ -7,7 +7,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 {
                     name: 'pepe',
                     position: 1,
-                    points: 0,
+                    points: 500,
                     events: 0,
                     heats: 'Heat 1',
                     lane: 3,
