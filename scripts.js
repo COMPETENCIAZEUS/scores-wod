@@ -5,9 +5,9 @@ document.addEventListener('DOMContentLoaded', function() {
         beginner: {
             men: [
                 {
-                    name: 'pepee',
-                    position: 2,
-                    points: 50,
+                    name: 'pepe',
+                    position: 1,
+                    points: 0,
                     events: 0,
                     heats: 'Heat 1',
                     lane: 3,
@@ -21,9 +21,9 @@ document.addEventListener('DOMContentLoaded', function() {
                 },
 
                 {
-                    name: 'NAMEESS',
-                    position: 1,
-                    points: 50,
+                    name: 'NAMELESS',
+                    position: 2,
+                    points: 0,
                     events: 0,
                     heats: 'Heat 1',
                     lane: 4,
@@ -1006,7 +1006,7 @@ function renderCategory(category, gender, containerId) {
                            <h6>Eventos Realizados:</h6> <p>${participant.events}</p>
                            <h6>Heat:</h6> <p>${participant.heats}</p>
                            <h6>Carril:</h6> <p>${participant.lane}</p>
-                           <h6>Hora de inicio:</h6> <p>${participant.schedule}</p>`;
+                           <h6>Horario de proximo evento:</h6> <p>${participant.schedule}</p>`;
         
         participant.eventDetails.forEach((event, index) => {
             detailsHtml += `<h6>${event.name}:</h6>
@@ -1030,5 +1030,3 @@ function renderCategory(category, gender, containerId) {
 
     renderAllCategories();
 });
-
-
