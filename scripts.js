@@ -5,9 +5,9 @@ document.addEventListener('DOMContentLoaded', function() {
         beginner: {
             men: [
                 {
-                    name: 'pepe',
-                    position: 1,
-                    points: 0,
+                    name: 'pep',
+                    position: 2,
+                    points: 50,
                     events: 0,
                     heats: 'Heat 1',
                     lane: 3,
@@ -21,9 +21,9 @@ document.addEventListener('DOMContentLoaded', function() {
                 },
 
                 {
-                    name: 'NAMELESS',
-                    position: 2,
-                    points: 0,
+                    name: 'NAM',
+                    position: 1,
+                    points: 100,
                     events: 0,
                     heats: 'Heat 1',
                     lane: 4,
