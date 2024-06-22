@@ -1031,3 +1031,39 @@ function renderCategory(category, gender, containerId) {
     renderAllCategories();
 });
 
+// Verificar si el dispositivo es móvil
+    function isMobileDevice() {
+        return (typeof window.orientation !== "undefined") || (navigator.userAgent.indexOf('IEMobile') !== -1);
+    }
+
+    // Mostrar mensaje de orientación horizontal en dispositivos móviles
+    function showOrientationMessage() {
+        if (isMobileDevice()) {
+            const orientationMessage = document.getElementById('orientation-message');
+
+            orientationMessage.addEventListener('click', function() {
+                orientationMessage.classList.add('hidden');
+            });
+            
+            // Verificar la orientación actual y ocultar el mensaje cuando el dispositivo esté en horizontal
+            window.addEventListener('orientationchange', function() {
+                if (window.orientation === 0 || window.orientation === 180) {
+                    orientationMessage.style.display = 'flex';
+                } else {
+                    orientationMessage.style.display = 'none';
+                }
+            });
+
+            // Mostrar el mensaje si el dispositivo está en vertical
+            if (window.orientation === 0 || window.orientation === 180) {
+                orientationMessage.style.display = 'flex';
+            } else {
+                orientationMessage.style.display = 'none';
+            }
+        }
+    }
+
+    // Llamar a la función para mostrar el mensaje de orientación
+    showOrientationMessage();
+});
+
