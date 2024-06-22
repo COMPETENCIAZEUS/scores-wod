@@ -81,6 +81,58 @@
         </div>
     </div>
 
+    document.addEventListener('DOMContentLoaded', function() {
+    // Mostrar el logo al cargar la página
+    const logoOverlay = document.getElementById('logo-overlay');
+
+    // Ocultar el logo después de un tiempo
+    setTimeout(() => {
+        logoOverlay.classList.add('hidden');
+    }, 3000); // 3000ms = 3 segundos, ajusta según tu necesidad
+
+    // Resto de tu código existente
+    const categories = {
+        // ... Datos de ejemplo ...
+    };
+
+    // Función para renderizar tablas por categoría y género
+    function renderCategory(category, gender, containerId) {
+        // Código de renderización de tablas
+    }
+
+    // Renderizar todas las categorías y géneros
+    function renderAllCategories() {
+        // Código para renderizar todas las categorías
+    }
+
+    // Mostrar detalles del participante en el modal
+    function showParticipantDetails(category, gender, name) {
+        // Código para mostrar detalles del participante en el modal
+    }
+
+    // Inicializar el renderizado de todas las categorías
+    renderAllCategories();
+
+    // Evento para mostrar el modal con los detalles del participante
+    document.addEventListener('click', function(e) {
+        // Código para mostrar detalles del participante en el modal
+    });
+
+    // Verificar si el dispositivo es móvil
+    function isMobileDevice() {
+        return (typeof window.orientation !== "undefined") || (navigator.userAgent.indexOf('IEMobile') !== -1);
+    }
+  
+   <body>
+    <div id="logo-overlay">
+        <img src="ruta/a/tu/logo.png" alt="Logo" id="logo">
+    </div>
+    <!-- El resto de tu contenido aquí -->
+    <script src="ruta/a/tu/scripts.js"></script>
+</body>
+
+
+
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
