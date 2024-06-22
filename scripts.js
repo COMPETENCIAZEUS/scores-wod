@@ -6,8 +6,8 @@ document.addEventListener('DOMContentLoaded', function() {
             men: [
                 {
                     name: 'pep',
-                    position: 1,
-                    points: 0,
+                    position: 2,
+                    points: 2,
                     events: 0,
                     heats: 'Heat 1',
                     lane: 3,
@@ -21,9 +21,9 @@ document.addEventListener('DOMContentLoaded', function() {
                 },
 
                 {
-                    name: 'NAMELESS',
-                    position: 2,
-                    points: 0,
+                    name: 'NAMa',
+                    position: 1,
+                    points: 50,
                     events: 0,
                     heats: 'Heat 1',
                     lane: 4,
