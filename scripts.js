@@ -5,7 +5,7 @@ document.addEventListener('DOMContentLoaded', function() {
         beginner: {
             men: [
                 {
-                    name: 'pepe',
+                    name: 'pep',
                     position: 1,
                     points: 0,
                     events: 0,
