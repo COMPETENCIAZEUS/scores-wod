@@ -1030,5 +1030,12 @@ function renderCategory(category, gender, containerId) {
 
     renderAllCategories();
 });
+document.addEventListener('DOMContentLoaded', function() {
+    // Mostrar el logo al cargar la página
+    const logoOverlay = document.getElementById('logo-overlay');
 
+    // Ocultar el logo después de un tiempo
+    setTimeout(() => {
+        logoOverlay.classList.add('hidden');
+    }, 3000); // 3000ms = 3 segundos, ajusta según tu necesidad
 
